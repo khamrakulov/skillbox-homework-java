@@ -1,13 +1,13 @@
 public class Basket {
+
+    private static int count = 0;
     private String items = "";
-    private static int totalPrice = 0;
+    private int totalPrice = 0;
     private int limit;
     private double totalWeight = 0;
 
-    private static int count = 0;
-
     public Basket() {
-        increaseCount();
+        increaseCount(1);
         items = "Список товаров:";
         this.limit = 1000000;
     }
@@ -27,8 +27,8 @@ public class Basket {
         return count;
     }
 
-    public static void increaseCount() {
-        Basket.count += 1;
+    public static void increaseCount(int count) {
+        Basket.count = Basket.count + count;
     }
 
     public void add(String name, int price) {

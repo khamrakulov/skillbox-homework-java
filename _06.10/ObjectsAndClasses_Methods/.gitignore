@@ -3,6 +3,7 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 ObjectsAndClasses_Methods.iml
+.idea/
 
 ### Eclipse ###
 .apt_generated
