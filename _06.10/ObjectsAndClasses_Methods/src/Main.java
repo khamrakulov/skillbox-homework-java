@@ -13,9 +13,6 @@ public class Main {
         basket2.print("basket2");
         System.out.println("\n");
 
-        System.out.println("Total items:");
-        System.out.println(Basket.getCountAllItems());
-        System.out.println("Total Price:");
-        System.out.println(Basket.getTotalPriceBaskets());
+        System.out.println(Basket.getAveragePriceBasket(basket1));
     }
 }

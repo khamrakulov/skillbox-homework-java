@@ -26,7 +26,7 @@ public class Basket {
         this.totalPriceBasket = totalPriceBasket;
     }
 
-    public int getcountItemsBasket() {
+    public int getCountItemsBasket() {
         return countItemsBasket;
     }
 
@@ -77,7 +77,7 @@ public class Basket {
         totalPriceBasket = 0;
     }
 
-    public int getTotalPrice() {
+    public int getTotalPriceBasket() {
         return totalPriceBasket;
     }
     public double getTotalWeight() {
@@ -116,5 +116,16 @@ public class Basket {
 
     private static void increaseTotalPriceBaskets(int price) {
         Basket.totalPriceAllItems += price;
+    }
+
+    public static int getAveragePriceAllItems() {
+        return Basket.totalPriceAllItems / Basket.CountAllItemsOfBaskets;
+    }
+
+    public static int getAveragePriceBasket(Basket basket) {
+        int totalPrice = basket.getTotalPriceBasket();
+        int countItems = basket.getCountItemsBasket();
+
+        return totalPrice / countItems;
     }
 }
