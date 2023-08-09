@@ -1,6 +1,9 @@
 package Accessories;
 
 public class Storage {
+    private final String downAndfourSpace = PrivateMethods.downAndFourSpace();
+    private final String downAndEightspace = PrivateMethods.downAndEightSpace();
+
     private StorageType type;
     private int volumeMemory;
     private int weight;
@@ -23,6 +26,20 @@ public class Storage {
         return weight;
     }
 
+    public String fullInfo() {
+        String type = getType().toString();
+        String volumeMemory = getVolumeMemory() + " GB";
+        String weight = getWeight() + " kg";
+
+        String info = "Storage:" +
+                downAndEightspace + "Type: " + type +
+                downAndEightspace + "Memory: " + volumeMemory +
+                downAndEightspace + "Weight: " + weight;
+
+        return info;
+    }
+
+    // enum
     public enum StorageType {
         HDD,
         SSD

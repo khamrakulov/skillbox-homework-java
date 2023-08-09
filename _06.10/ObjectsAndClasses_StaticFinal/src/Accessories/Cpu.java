@@ -1,6 +1,9 @@
 package Accessories;
 
 public class Cpu {
+    private final String downAndfourSpace = PrivateMethods.downAndFourSpace();
+    private final String downAndEightspace = PrivateMethods.downAndEightSpace();
+
     private final double frequency;
     private final int countCores;
     private final String vendor;
@@ -29,4 +32,18 @@ public class Cpu {
         return weight;
     }
 
+    public String fullInfo(){
+        String frequency = getFrequency() + " GHz";
+        String cores = getCountCores() + " cores";
+        String vendor = getVendor();
+        String weight = getWeight() + " kg";
+
+        String info = "CPU:\n" +
+                downAndEightspace + "Frequency: " + frequency +
+                downAndEightspace + "Number of cores: " + cores +
+                downAndEightspace + "Vendor: " + vendor +
+                downAndEightspace + "Weight: " + weight;
+
+        return info;
+    }
 }
